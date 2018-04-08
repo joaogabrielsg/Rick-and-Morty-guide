@@ -1,0 +1,26 @@
+.Board {
+    margin: 5% 5%;   
+    display: grid;
+    align-content: center;
+
+    // grid-column-gap: 20px;
+}
+
+@media only screen and (min-width: 500px) {
+    [class*="Board"] {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    [class*="Board"] {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    [class*="Board"] {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+

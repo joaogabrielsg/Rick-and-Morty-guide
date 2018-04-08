@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/SearchBar.scss';
+import SearchImage from '../assets/search.png'
 
 class SearchBar extends Component {
 
@@ -8,7 +9,7 @@ class SearchBar extends Component {
             <div className="SearchBar">
                 <div className="SearchBar-header">
                     <input className="SearchBar-input" type="text" placeholder="Search a Character"/><button>
-                        <img src="../assets/search.svg" alt="search"/>
+                        <img src={SearchImage} alt="search"/>
                     </button>
                 </div>
             </div>

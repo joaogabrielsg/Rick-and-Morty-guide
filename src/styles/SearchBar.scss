@@ -3,36 +3,36 @@
   transform: translate(0, -50%);
 }
 
-.SearchBar {
+.SearchBar{
+    align-content: center;
 }
 
 .SearchBar-header {
+    align-content: center;
     background-color: #00BCD4;
-    padding: 2%;
-    margin: 5% 5%;
-    left: 50px;
-    color: white;
+    width: 50%;
+    display: inline-flex;
+    padding: 1% 2%;
+    margin: 5% 10%;
+    // margin: auto;
 }
 
 ::placeholder {
     color:white;
-    font-family: "Roboto";
 }
 
 .SearchBar-input {
     background-color: #00BCD4;
     color: white;
-    display: inline;
-    font-family: "Roboto";
-    font-size: 100%;
-    height: 41px;
-    text-align: left;
+    font-size: 160%;
+    // text-align: left;
     width: 90%;
     padding: 0px;
     border: 0px;
-    margin: 0;
+    margin: 0px;
 }
 
 button {
-    position: relative;
+    background-color: #00BCD4;
+    border: 0px;
 }
