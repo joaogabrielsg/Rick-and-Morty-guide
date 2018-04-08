@@ -7,7 +7,7 @@ class Card extends Component {
         return (
             <div className="Card">
                 <div className="Card-middle">
-                    <img src={this.props.image} alt="Character Image" />
+                    <img src={this.props.image} alt="Character"/>
                     <h1>{this.props.name}</h1>
                     <div className="sameLine">
                         <p className="id">{this.props.id}</p>

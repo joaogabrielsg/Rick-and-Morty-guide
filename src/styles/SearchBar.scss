@@ -1,3 +1,6 @@
+$primary-color: #00BCD4;
+$text-color: white;
+
 @mixin center-vertical() {
   top: 50%;
   transform: translate(0, -50%);
@@ -9,23 +12,21 @@
 
 .SearchBar-header {
     align-content: center;
-    background-color: #00BCD4;
+    background-color: $primary-color;
     width: 50%;
     display: inline-flex;
     padding: 1% 2%;
     margin: 5% 10%;
-    // margin: auto;
 }
 
 ::placeholder {
-    color:white;
+    color: $text-color;
 }
 
 .SearchBar-input {
-    background-color: #00BCD4;
-    color: white;
+    background-color: $primary-color;
+    color: $text-color;
     font-size: 160%;
-    // text-align: left;
     width: 90%;
     padding: 0px;
     border: 0px;
@@ -33,6 +34,6 @@
 }
 
 button {
-    background-color: #00BCD4;
+    background-color: $primary-color;
     border: 0px;
 }

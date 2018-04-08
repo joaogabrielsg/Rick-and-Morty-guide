@@ -7,16 +7,20 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      name: ''
     };
+    this.changeName = this.changeName.bind(this);
+  }
+
+  changeName(event) {
+    this.setState({ name: event.target.value });
   }
 
   render() {
     return (
       <div>
-        <SearchBar></SearchBar>
-
-        <Board></Board>
-
+        <SearchBar name={this.state.name} onChange={ this.changeName }></SearchBar>
+        <Board name={this.state.name}></Board>
       </div>
     );
   }

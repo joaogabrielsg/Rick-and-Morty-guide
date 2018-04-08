@@ -8,44 +8,34 @@ class Board extends Component {
         super(props);
         this.state = {
             isLoading: true,
-            characters: []
+            characters: [],
+            searchCharacters: []
         };
     }
 
     componentDidMount() {
-        this.requestCharacters();
-    }
-
-    requestCharacters() {
         request('https://rickandmortyapi.com/api/character/', (error, result) => {
-            this.setState({ characters: result });
-            this.setState({ isLoading: false });
-            return result;
+            this.setState({ characters: result, searchCharacters: result, isLoading: false });
         })
     }
 
-    renderCard(props) {
-        const characters = props.characters;
-        const listCards = characters.map((character) => {
-            <Card id={character.id} name={character.name}></Card>
-        });
-        return (
-            <ul>
-                {listCards}
-            </ul>
-        );
+    componentWillReceiveProps(props) {
+        const search = this.state.characters.filter((character) => {
+            return character.name.toUpperCase().indexOf(props.name.toUpperCase()) >= 0 ? true : false;
+        })
+
+        this.setState({ searchCharacters: search });
     }
 
     render() {
-
-        const { isLoading, characters } = this.state;
+        const { isLoading, searchCharacters } = this.state;
 
         if (isLoading) {
             return <p>Loading ...</p>;
         }
 
         return (
-            <div className="Board">{characters.map(character =>
+            <div className="Board">{searchCharacters.map(character =>
                 <div key={character.id}>
                     <Card name={character.name}
                         id={character.id}

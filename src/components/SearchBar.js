@@ -8,7 +8,10 @@ class SearchBar extends Component {
         return (
             <div className="SearchBar">
                 <div className="SearchBar-header">
-                    <input className="SearchBar-input" type="text" placeholder="Search a Character"/><button>
+                    <input className="SearchBar-input" 
+                           type="text" placeholder="Search a Character" 
+                           value={this.props.name} 
+                           onChange={this.props.onChange}/><button>
                         <img src={SearchImage} alt="search"/>
                     </button>
                 </div>
