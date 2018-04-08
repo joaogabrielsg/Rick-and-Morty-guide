@@ -8,10 +8,10 @@ class Card extends Component {
             <div className="Card">
                 <div className="Card-middle">
                     <img src={this.props.image} alt="Character"/>
-                    <h1>{this.props.name}</h1>
-                    <div className="sameLine">
-                        <p className="id">{this.props.id}</p>
-                        <p className="info">{this.props.status} / {this.props.species}</p>
+                    <h1 className="h1Card">{this.props.name}</h1>
+                    <div className="SameLine">
+                        <p className="Id">{this.props.id}</p>
+                        <p className="Info">{this.props.status} / {this.props.species}</p>
                     </div>
                 </div>
             </div>

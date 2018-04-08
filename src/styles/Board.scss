@@ -4,6 +4,10 @@
     align-content: center;
 }
 
+.Link {
+    text-decoration: none;
+}
+
 @media only screen and (min-width: 500px) {
     [class*="Board"] {
         grid-template-columns: 1fr;

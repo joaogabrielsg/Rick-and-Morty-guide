@@ -2,25 +2,20 @@ import React, { Component } from 'react';
 import '../styles/App.scss';
 import SearchBar from './SearchBar.js'
 import Board from './Board.js'
+import { Route, Switch } from "react-router-dom";
+
+import Home from './Home.js'
+import Description from './CardDescription.js'
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: ''
-    };
-    this.changeName = this.changeName.bind(this);
-  }
-
-  changeName(event) {
-    this.setState({ name: event.target.value });
-  }
 
   render() {
     return (
       <div>
-        <SearchBar name={this.state.name} onChange={ this.changeName }></SearchBar>
-        <Board name={this.state.name}></Board>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/description/:id" component={Description}></Route>
+        </Switch>
       </div>
     );
   }
