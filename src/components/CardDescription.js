@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/CardDescription.scss';
 import request from '../helpers/api.js';
-import Card from './Card.js'
 
 class CardDescription extends Component {
     constructor(props) {
@@ -39,7 +38,7 @@ class CardDescription extends Component {
                         <div className="CardDescription-middle">
                             
                             <div className="SameLine">
-                                <img src={character.image} alt="Character" />
+                                <img className="imgDescription" src={character.image} alt="Character" />
                                 <div className="Description">
                                     <h1 className="h1Description">{character.name}</h1>
                                     <div>

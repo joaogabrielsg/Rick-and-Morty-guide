@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import '../styles/App.scss';
-import SearchBar from './SearchBar.js'
-import Board from './Board.js'
 import { Route, Switch } from "react-router-dom";
 
 import Home from './Home.js'
